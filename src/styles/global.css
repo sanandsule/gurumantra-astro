@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.parallax-section {
+    will-change: transform, opacity;
+}
+
+.course-card:hover {
+    background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(236,72,153,0.2));
+}
+.course-card {
+    cursor: pointer;
+}
+.modal {
+    display: none;
+}
+.modal.active {
+    display: flex;
+}

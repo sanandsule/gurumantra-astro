@@ -1,0 +1,66 @@
+---
+---
+
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/70 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+
+    <!-- LOGO -->
+    <!-- <a href="/" class="text-xl font-bold tracking-tight">
+      Gurumantra
+    </a> -->
+    <a href="/" class="flex items-center space-x-4 group">
+        <img 
+            src="/logo.png" 
+            alt="Gurumantra Logo" 
+            class="h-18 w-auto object-contain"
+        />
+        <div class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            GURUMANTRA
+        </div>
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <!-- <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+      <a href="/#programs" class="hover:text-purple-400 transition">Programs</a>
+      <a href="/#projects" class="hover:text-purple-400 transition">Projects</a>
+      <a href="/#incubation" class="hover:text-purple-400 transition">Incubation</a>
+      <a href="/about" class="hover:text-purple-400 transition">About</a>
+    </div>
+
+    <a href="#courses"
+    class="hidden md:inline-block bg-gradient-to-r from-purple-600 to-pink-600
+            px-4 py-2 rounded-full text-lg
+            hover:scale-105 transition-transform">
+    Start Your AI Journey
+    </a> -->
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menu-btn" class="text-white text-2xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden px-6 pb-6 bg-black border-t border-white/10 max-w-md ml-auto">
+    <div class="flex flex-col gap-4 mt-4 text-gray-300">
+      <a href="/#programs" class="hover:text-purple-400 transition">Programs</a>
+      <a href="/#projects" class="hover:text-purple-400 transition">Projects</a>
+      <a href="/#incubation" class="hover:text-purple-400 transition">Incubation</a>
+      <a href="/about" class="hover:text-purple-400 transition">About</a>
+
+      <button class="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+        Book Call
+      </button>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  </script>
+</nav>

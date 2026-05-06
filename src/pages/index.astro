@@ -1,11 +1,206 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from "../components/react/Hero";
+import Differentiation from "../components/react/Differentiation";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<!-- <Welcome /> -->
+	 <!-- HERO -->
+  <Hero client:load />
+
+  	<!-- DIFFERENTIATION -->
+	<Differentiation client:visible />
+  <!-- <section class="px-6 md:px-16 py-20 grid md:grid-cols-3 gap-6">
+    {
+      ["Learn by Building", "Live Mentorship", "Internship Pathway", "Startup Incubation", "Research & Patents", "Career Focused"]
+        .map(item => (
+          <div class="bg-gray-900 p-6 rounded-xl">
+            <h3 class="text-lg font-semibold">{item}</h3>
+            <p class="text-gray-400 text-sm mt-2">
+              Practical, outcome-driven approach
+            </p>
+          </div>
+        ))
+    }
+  </section> -->
+
+  <!-- Courses Section -->
+    <section id="courses" class="bg-zinc-950 px-6 py-32">
+        <div class="parallax-section max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Your <span class="text-purple-400">AI Learning Path</span>
+            </h2>
+            <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
+            Don’t just take courses. Progress through a carefully designed journey
+            that transforms you from a learner into an AI professional.
+            </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="parallax-section max-w-7xl mx-auto grid md:grid-cols-5 gap-6 mb-16">
+
+            <!-- Stage 1 -->
+            <div onclick="openCourseModal('Python Foundations')" class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+            <div class="text-purple-400 text-sm font-semibold mb-2">Stage 1</div>
+            <h3 class="text-xl font-bold mb-2">Python Foundations</h3>
+            <p class="text-gray-400 text-sm">
+                Think logically. Code confidently.
+            </p>
+            </div>
+
+            <!-- Stage 2 -->
+            <div onclick="openCourseModal('Machine Learning')" class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+            <div class="text-purple-400 text-sm font-semibold mb-2">Stage 2</div>
+            <h3 class="text-xl font-bold mb-2">Machine Learning</h3>
+            <p class="text-gray-400 text-sm">
+                Teach machines to learn from data.
+            </p>
+            </div>
+
+            <!-- Stage 3 -->
+            <div onclick="openCourseModal('Deep Learning')" class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+            <div class="text-purple-400 text-sm font-semibold mb-2">Stage 3</div>
+            <h3 class="text-xl font-bold mb-2">Deep Learning</h3>
+            <p class="text-gray-400 text-sm">
+                Build neural networks that see and understand.
+            </p>
+            </div>
+
+            <!-- Stage 4 -->
+            <div onclick="openCourseModal('Generative AI')" class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+            <div class="text-purple-400 text-sm font-semibold mb-2">Stage 4</div>
+            <h3 class="text-xl font-bold mb-2">Generative AI</h3>
+            <p class="text-gray-400 text-sm">
+                Create with LLMs, RAG & copilots.
+            </p>
+            </div>
+
+            <!-- Stage 5 -->
+            <div onclick="openCourseModal('Agentic AI')" class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+            <div class="text-purple-400 text-sm font-semibold mb-2">Stage 5</div>
+            <h3 class="text-xl font-bold mb-2">Agentic AI</h3>
+            <p class="text-gray-400 text-sm">
+                Autonomous agents that plan & act.
+            </p>
+            </div>
+
+        </div>
+
+        <!-- Career Mapping -->
+        <div class="parallax-section max-w-6xl mx-auto text-center mb-16">
+            <h3 class="text-3xl font-bold mb-6">
+            Where This Can Take You
+            </h3>
+
+            <div class="flex flex-wrap justify-center gap-6 text-lg">
+            <span class="glass px-6 py-3 rounded-full">AI Engineer</span>
+            <span class="glass px-6 py-3 rounded-full">ML Engineer</span>
+            <span class="glass px-6 py-3 rounded-full">Data Scientist</span>
+            <span class="glass px-6 py-3 rounded-full">AI Product Builder</span>
+            <span class="glass px-6 py-3 rounded-full">Automation Consultant</span>
+            </div>
+
+            <p class="text-gray-400 mt-6 max-w-3xl mx-auto">
+            Each role is powered by multiple stages of the learning path —
+            not a single course, but a complete transformation.
+            </p>
+        </div>
+	</section>
+
+  <!-- ROADMAP -->
+  <section class="px-6 md:px-16 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">
+      Your Journey with Gurumantra
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      {["Learn", "Build", "Intern", "Launch"].map(step => (
+        <div class="bg-gray-900 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold">{step}</h3>
+          <p class="text-gray-400 mt-2">Real-world growth</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="px-6 md:px-16 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10">Explore Programs</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {["AI & ML", "Applied AI", "DevOps", "Startup", "Projects"].map(p => (
+        <div class="bg-gray-900 p-6 rounded-xl">
+          <h3 class="text-xl">{p}</h3>
+          <p class="text-gray-400 mt-2">Build real-world expertise</p>
+          <button class="mt-4 px-4 py-2 bg-purple-500 rounded">
+            View Details
+          </button>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 md:px-16 py-5 text-center">
+	<!-- Final CTA -->
+	<div class="max-w-5xl mx-auto text-center glass p-16 rounded-3xl">
+		<h3 class="text-4xl md:text-5xl font-extrabold mb-6">
+		AI won’t replace you.
+		<br />
+		<span class="text-purple-400">
+			Someone who understands AI will.
+		</span>
+		</h3>
+
+		<p class="text-gray-300 text-lg mb-10 max-w-3xl mx-auto">
+		Start building skills that compound for the next decade —
+		guided by mentors who work with real AI systems.
+		</p>
+
+		<div class="flex flex-col md:flex-row justify-center gap-6">
+		<a href="#signup" onclick="openJoinModal()"
+			class="bg-gradient-to-r from-purple-600 to-pink-600
+					px-10 py-4 rounded-full font-bold text-lg
+					hover:scale-105 transition">
+			Join Gurumantra
+		</a>
+
+		<!-- <a href="#contact" onclick="openJoinModal()"
+			class="border border-white/20 px-10 py-4 rounded-full
+					font-bold text-lg hover:bg-white/10 transition">
+			Book a Free Guidance Call
+		</a> -->
+		</div>
+
+		<h3 class="text-3xl md:text-4xl font-bold mt-8">
+			Not Sure Where to Start?
+		</h3>
+
+		<p class="mt-4 text-gray-400">
+			Take a quiz or talk to us.
+		</p>
+
+		<div class="mt-8 flex justify-center gap-4 flex-wrap">
+		<!-- <button class="px-6 py-3 bg-purple-500 rounded">
+			Take Quiz
+		</button> -->
+		<a href="#contact" onclick="openJoinModal()"
+			class="border border-white/20 px-10 py-4 rounded-full
+					font-bold text-lg hover:bg-white/10 transition">
+			Take a Quiz to Discover
+		</a>
+		<a href="#contact" onclick="openJoinModal()"
+			class="border border-white/20 px-10 py-4 rounded-full
+					font-bold text-lg hover:bg-white/10 transition">
+			Book a Free Guidance Call
+		</a>
+		</div>
+	</div>
+  </section>
+
 </Layout>
