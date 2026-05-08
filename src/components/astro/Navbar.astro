@@ -43,14 +43,13 @@
   <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden px-6 pb-6 bg-black border-t border-white/10 max-w-md ml-auto">
     <div class="flex flex-col gap-4 mt-4 text-gray-300">
-      <a href="/#programs" class="hover:text-purple-400 transition">Programs</a>
-      <a href="/#projects" class="hover:text-purple-400 transition">Projects</a>
-      <a href="/#incubation" class="hover:text-purple-400 transition">Incubation</a>
-      <a href="/about" class="hover:text-purple-400 transition">About</a>
-
-      <button class="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
-        Book Call
-      </button>
+      <a href="#about" class="hover:text-purple-400 transition">About</a>
+      <a href="#process" class="hover:text-purple-400 transition">How we work</a>
+      <a href="#future" class="hover:text-purple-400 transition">Strategize</a>
+      <a href="#programs" class="hover:text-purple-400 transition">Programs</a>
+      <a href="#action" class="mt-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+        Know More
+      </a>
     </div>
   </div>
 
@@ -61,6 +60,15 @@
 
     btn?.addEventListener('click', () => {
       menu?.classList.toggle('hidden');
+    });
+
+    // Close menu when any link is clicked
+    const menuLinks = menu?.querySelectorAll('a');
+
+    menuLinks?.forEach((link) => {
+      link.addEventListener('click', () => {
+        menu?.classList.add('hidden');
+      });
     });
   </script>
 </nav>

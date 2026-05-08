@@ -91,7 +91,7 @@ export default function Hero() {
 
         </div>
 
-        <a href="#courses"
+        <a href="#future"
         className="inline-block bg-gradient-to-r from-purple-600 to-pink-600
                 px-10 py-4 rounded-full font-bold text-lg
                 hover:scale-105 transition-transform">

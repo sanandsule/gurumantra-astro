@@ -3,6 +3,8 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/react/Hero";
 import Differentiation from "../components/react/Differentiation";
+import PathfinderQuiz from '../components/react/PathfinderQuiz';
+import ContactForm from '../components/react/ContactForm';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -13,24 +15,226 @@ import Differentiation from "../components/react/Differentiation";
 	 <!-- HERO -->
   <Hero client:load />
 
+  <section id="about" class="px-6 md:px-16 py-6 text-center scroll-mt-20">
+    <h1 class="text-4xl md:text-5xl font-bold text-purple-400">
+      About Gurumantra
+    </h1>
+
+    <p class="mt-6 text-gray-400 leading-relaxed max-w-4xl text-lg mx-auto">
+    Gurumantra Center of Learning is where <span class="text-white font-semibold">curiosity meets real-world AI</span>.
+    We are not just an institute — we are a learning lab, and an AI Career Accelerator focused on helping students 
+    and professionals build, ship, and scale intelligent systems that matter.
+    </p>
+
+    <div class="mt-6 glass p-6 rounded-2xl text-center">
+      <h3 class="text-3xl font-semibold mb-4 mt-10 text-purple-400">The Minds Behind the Mentorship</h3>
+      <p class="text-gray-400 leading-relaxed text-lg max-w-6xl mx-auto">
+          We are a collective of <span class="text-white">architects, engineers, strategists, and founders</span> from the world’s most reputed academic institutions 
+          who have spent years building at the intersection of AI and industry. 
+          <br/><br/>Our trainers don’t just teach—they lead. With deep 
+          expertise across Technology and Engineering, and a strong network across the industry, 
+          our mentors translate complex theory into 
+          the high-stakes reality of the corporate and the start-up world. 
+          <br/><br/>At Gurumantra, you aren't just learning a stack; you are gaining a decade of industry 
+          intuition and hard-won experience from professionals who have shaped the systems they now teach.
+      </p>
+    </div>
+    
+  </section>
+  <section class="px-6 md:px-16 py-6 grid md:grid-cols-3 gap-3">   
+    <div class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+      <h3 class="text-xl font-semibold text-purple-400">Our Vision</h3>
+      <p class="text-gray-400 mt-2">
+        To create a generation of <span class="text-white">AI-native professionals, builders, 
+            innovators, and leaders</span> who don’t fear disruption — they design it.
+      </p>
+    </div>
+
+    <div class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+      <h3 class="text-xl font-semibold text-purple-400">Our Mission</h3>
+      <p class="text-gray-400 mt-2">
+        To demystify AI and make advanced technology
+        <span class="text-white">practical, accessible, and career-shaping</span>
+        through hands-on learning, real projects, and industry-aligned thinking.
+      </p>
+    </div>
+
+    <div class="group course-card glass p-6 rounded-2xl text-center hover:-translate-y-2 transition-all duration-300">
+      <h3 class="text-xl font-semibold text-purple-400">Learn → Build → Intern → Launch</h3>
+      <p class="text-gray-400 mt-2">
+        Our approach is simple. Learn and gain expertise, create tangible projects and build a portfolio, 
+        work on real world problems as an intern, and launch yourself as a future ready corporate professional 
+        or a start-up founder.
+        <!-- <span class="text-white">/span> -->
+      </p>
+    </div>
+  </section>
+
   	<!-- DIFFERENTIATION -->
 	<Differentiation client:visible />
-  <!-- <section class="px-6 md:px-16 py-20 grid md:grid-cols-3 gap-6">
-    {
-      ["Learn by Building", "Live Mentorship", "Internship Pathway", "Startup Incubation", "Research & Patents", "Career Focused"]
-        .map(item => (
-          <div class="bg-gray-900 p-6 rounded-xl">
-            <h3 class="text-lg font-semibold">{item}</h3>
-            <p class="text-gray-400 text-sm mt-2">
-              Practical, outcome-driven approach
-            </p>
-          </div>
-        ))
-    }
-  </section> -->
+
+  <section id="future" class="relative px-6 md:px-16 py-12 overflow-hidden bg-gradient-to-b from-black via-gray-950 to-black scroll-mt-20">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+
+  <!-- HEADER -->
+  <div class="relative z-10 max-w-4xl mx-auto text-center mb-20">
+
+    <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+      Choose the Future <br />
+      You Want to Build
+    </h2>
+
+    <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+      Gurumantra helps learners move beyond theory into meaningful career,
+      research, entrepreneurial, and project-driven outcomes.
+    </p>
+
+  </div>
+
+  <!-- OUTCOME GRID -->
+  <div class="relative z-10 grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+    <!-- CARD 1 -->
+    <div class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10">
+
+      <div class="text-5xl mb-6">💼</div>
+
+      <h3 class="text-2xl font-semibold">
+        Build an AI Career
+      </h3>
+
+      <p class="mt-4 text-gray-400 leading-relaxed">
+        Develop industry-ready AI, ML, DevOps, and Applied AI skills to
+        unlock internships, placements, and long-term career growth.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-purple-500/10 text-sm text-purple-300">
+          AI Engineer
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-purple-500/10 text-sm text-purple-300">
+          MLOps
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-purple-500/10 text-sm text-purple-300">
+          Internship Ready
+        </span>
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-pink-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-500/10">
+
+      <div class="text-5xl mb-6">📄</div>
+
+      <h3 class="text-2xl font-semibold">
+        Build Intellectual Property
+      </h3>
+
+      <p class="mt-4 text-gray-400 leading-relaxed">
+        Strengthen your profile through research papers, patents, innovation,
+        and impactful technical contributions.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-pink-500/10 text-sm text-pink-300">
+          Research Papers
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-pink-500/10 text-sm text-pink-300">
+          Patents
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-pink-500/10 text-sm text-pink-300">
+          Innovation
+        </span>
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/10">
+
+      <div class="text-5xl mb-6">🚀</div>
+
+      <h3 class="text-2xl font-semibold">
+        Start Your Entrepreneurial Journey
+      </h3>
+
+      <p class="mt-4 text-gray-400 leading-relaxed">
+        Transform ideas into startups with mentorship on execution,
+        product-building, business strategy, and investor readiness.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-sm text-cyan-300">
+          Startup Guidance
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-sm text-cyan-300">
+          MVP Building
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-sm text-cyan-300">
+          Pitching
+        </span>
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-orange-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-500/10">
+
+      <div class="text-5xl mb-6">🛠️</div>
+
+      <h3 class="text-2xl font-semibold">
+        Build Real-World Projects
+      </h3>
+
+      <p class="mt-4 text-gray-400 leading-relaxed">
+        Create impactful portfolio-worthy systems that demonstrate practical
+        engineering and problem-solving ability — not just academic projects.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-orange-500/10 text-sm text-orange-300">
+          Portfolio Projects
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-orange-500/10 text-sm text-orange-300">
+          Real-world Systems
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-orange-500/10 text-sm text-orange-300">
+          Resume Impact
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="relative z-10 text-center mt-20">
+
+    <p class="text-gray-400 mb-6">
+      Get more details and strategize your direction.
+    </p>
+
+    <a id="openMessage" class="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 font-medium hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
+      Let's brainstorm!
+    </a>
+
+  </div>
+
+</section>
 
   <!-- Courses Section -->
-    <section id="courses" class="bg-zinc-950 px-6 py-32">
+    <section id="programs" class="bg-zinc-950 px-6 py-12 scroll-mt-20">
         <div class="parallax-section max-w-7xl mx-auto text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
             Your <span class="text-purple-400">AI Learning Path</span>
@@ -113,7 +317,7 @@ import Differentiation from "../components/react/Differentiation";
 	</section>
 
   <!-- ROADMAP -->
-  <section class="px-6 md:px-16 py-20">
+  <!-- <section class="px-6 md:px-16 py-20">
     <h2 class="text-3xl md:text-4xl font-bold mb-10">
       Your Journey with Gurumantra
     </h2>
@@ -126,10 +330,10 @@ import Differentiation from "../components/react/Differentiation";
         </div>
       ))}
     </div>
-  </section>
+  </section> -->
 
   <!-- PROGRAMS -->
-  <section class="px-6 md:px-16 py-20">
+  <!-- <section class="px-6 md:px-16 py-20">
     <h2 class="text-3xl md:text-4xl font-bold mb-10">Explore Programs</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
@@ -143,10 +347,10 @@ import Differentiation from "../components/react/Differentiation";
         </div>
       ))}
     </div>
-  </section>
+  </section> -->
 
   <!-- CTA -->
-  <section class="px-6 md:px-16 py-5 text-center">
+  <section id="action" class="px-6 md:px-16 py-5 text-center scroll-mt-20">
 	<!-- Final CTA -->
 	<div class="max-w-5xl mx-auto text-center glass p-16 rounded-3xl">
 		<h3 class="text-4xl md:text-5xl font-extrabold mb-6">
@@ -163,12 +367,12 @@ import Differentiation from "../components/react/Differentiation";
 		</p>
 
 		<div class="flex flex-col md:flex-row justify-center gap-6">
-		<a href="#signup" onclick="openJoinModal()"
+		<!-- <a href="#signup" onclick="openJoinModal()"
 			class="bg-gradient-to-r from-purple-600 to-pink-600
 					px-10 py-4 rounded-full font-bold text-lg
 					hover:scale-105 transition">
 			Join Gurumantra
-		</a>
+		</a> -->
 
 		<!-- <a href="#contact" onclick="openJoinModal()"
 			class="border border-white/20 px-10 py-4 rounded-full
@@ -182,25 +386,54 @@ import Differentiation from "../components/react/Differentiation";
 		</h3>
 
 		<p class="mt-4 text-gray-400">
-			Take a quiz or talk to us.
+			Take a quiz / Send us a message / Call us at +91-9420178300
 		</p>
 
 		<div class="mt-8 flex justify-center gap-4 flex-wrap">
 		<!-- <button class="px-6 py-3 bg-purple-500 rounded">
-			Take Quiz
+			Take Quiz onclick="openJoinModal()"
 		</button> -->
-		<a href="#contact" onclick="openJoinModal()"
+		<a id="openQuiz" href="#action" 
 			class="border border-white/20 px-10 py-4 rounded-full
-					font-bold text-lg hover:bg-white/10 transition">
+					font-bold text-lg hover:bg-white/10 transition hover:border-purple-500">
 			Take a Quiz to Discover
 		</a>
-		<a href="#contact" onclick="openJoinModal()"
+		<a id="openContact" href="#action"
 			class="border border-white/20 px-10 py-4 rounded-full
-					font-bold text-lg hover:bg-white/10 transition">
+					font-bold text-lg hover:bg-white/10 transition hover:border-purple-500">
 			Book a Free Guidance Call
 		</a>
+    <a href="https://wa.me/919420178300?text=Hi%20GuruMantra%2C%20I%20want%20to%20know%20more%20about%20your%20AI%20ML%20courses."
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition hover:border-purple-500 flex items-center gap-2">
+      <img src="src/assets/whatsapp.png" alt="" class="w-10 h-10">
+      <span>Contact us on WhatsApp</span>
+    </a>
 		</div>
 	</div>
   </section>
+
+  <!-- The Component -->
+    <!-- We wrap it in a div or use a state manager, but for a simple Astro page, 
+         we can handle the visibility via a small script or by passing props -->
+    <div id="quiz-container">
+       <PathfinderQuiz client:load />
+    </div>
+
+    <div id="contact-container">
+       <ContactForm client:load />
+    </div>
+
+    <script>
+      import { isQuizOpen } from '../store';
+      import { isContactOpen } from '../store';
+      const btn = document.getElementById('openQuiz');
+      const conBtn = document.getElementById('openContact');
+      const msgBtn = document.getElementById('openMessage');
+      btn?.addEventListener('click', () => isQuizOpen.set(true));
+      conBtn?.addEventListener('click', () => isContactOpen.set(true));
+      msgBtn?.addEventListener('click', () => isContactOpen.set(true));
+    </script>
 
 </Layout>

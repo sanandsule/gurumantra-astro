@@ -41,10 +41,10 @@ const nodes = [
 
 export default function DifferentiationMindmap() {
   return (
-    <section className="relative px-6 md:px-16 py-32 overflow-hidden bg-gradient-to-b from-black to-gray-950">
+    <section id="process" className="relative px-6 md:px-16 py-16 overflow-hidden bg-gradient-to-b from-black to-gray-950 scroll-mt-20">
       <div className="max-w-7xl mx-auto text-center mb-20">
-        <h2 className="text-3xl md:text-5xl font-bold">
-          Why Gurumantra Works Differently
+        <h2 className="text-3xl md:text-5xl font-bold text-purple-400">
+          How Gurumantra Works Differently
         </h2>
 
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg">
